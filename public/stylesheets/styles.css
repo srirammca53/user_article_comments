@@ -1,6 +1,14 @@
 a { color: aqua; }
 a:visited { color: white; }
-a:hover { color: black; background-color:white; }
+a:hover {
+ color: black; 
+ background-color:white;
+/* CSS3 Transform Effect */
+  	-webkit-transform: scale(1.2);     /* Safari & Chrome */
+  	-moz-transform: scale(1.2);        /* Firefox */
+  	-o-transform: scale(1.2);          /* Opera */
+
+  }
 
 h1
 {
@@ -12,3 +20,5 @@ h1
 	5px 5px 0 #444,
 	6px 6px 0 #444; /* end of 4 level deep dark shadow */
 }
+
+ 	
