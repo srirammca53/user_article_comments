@@ -11,6 +11,7 @@ gem 'ckeditor', :git => 'git://github.com/galetahub/rails-ckeditor.git', :branch
 gem 'will_paginate'
 gem "paperclip", "~> 2.3"
 gem 'aws-s3'
+gem 'pg'
 # Use unicorn as the web server
 # gem 'unicorn'
 
