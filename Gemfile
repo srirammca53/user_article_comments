@@ -9,7 +9,8 @@ gem 'sqlite3'
 gem 'mysql2', '0.2.6'
 gem 'ckeditor', :git => 'git://github.com/galetahub/rails-ckeditor.git', :branch => 'rails3'
 gem 'will_paginate'
-
+gem "paperclip", "~> 2.3"
+gem 'aws-s3'
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -20,8 +20,8 @@ def create
  #render :text => params.inspect and return
  @comment = Comment.find(params[:cid])
  @comment.update_attributes(:approve => params[:approve])
-  #redirect_to article_path(@article)
-render :text => "success" and return
+
+render :text => "Done" and return
  
  end
   

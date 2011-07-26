@@ -5,6 +5,9 @@
 </marquee>
 <h1><font color="white"><%= @article.title %></font></h1><font color="white"><i>by :</i><%= @user.username %></font>
 
+
+<font color="red"><%= link_to "download", @article.file.url %></font>
+<br/>
 <table border = 0>
 <tr bgcolor=	#A0C544>
   <td width="500" height="250"><%= sanitize(@article.description) %></font> </td>
@@ -18,6 +21,7 @@
     <font color="orange"><%= comment.commenter %>:</font>
     <font color="white"><%= comment.comment %></font>
     <font color="white"><i>on:</i><%= comment.created_at.strftime("%Y-%m-%d") %></font>
+    <br/>
  <% end %>
 <% end %>
 <h2><font color="green">Add a comment:</font></h2>
@@ -34,6 +38,7 @@
     <td><%= f.text_area :comment %></td>
   </tr>
   <table>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
