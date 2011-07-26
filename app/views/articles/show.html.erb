@@ -7,20 +7,21 @@
 
 <table border = 0>
 <tr bgcolor=	#A0C544>
-  <td width="500" height="250"><%= @article.description %></font> </td>
+  <td width="500" height="250"><%= sanitize(@article.description) %></font> </td>
  
 </tr>
 </table>
 <h2><font color="white"><blink>Comments</blink></font></h2>
 <% @article.comments.each do |comment| %>
-  <p>
+<% if comment.approve == 1 %>
+ 
     <font color="orange"><%= comment.commenter %>:</font>
     <font color="white"><%= comment.comment %></font>
     <font color="white"><i>on:</i><%= comment.created_at.strftime("%Y-%m-%d") %></font>
-     
-  </p>
+ <% end %>
 <% end %>
 <h2><font color="green">Add a comment:</font></h2>
+
 <%= form_for([@article, @article.comments.build]) do |f| %>
 <center>
   <table border=0 >
@@ -38,5 +39,6 @@
   </div>
   </center>
 <% end %>
+
 
 

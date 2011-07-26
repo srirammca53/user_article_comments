@@ -1,7 +1,8 @@
 class ArticlesController < ApplicationController
 def index
  @user = User.find(2)
- @article = @user.articles
+ @articles = @user.articles.paginate(:page =>params[:page], :per_page => 5) 
+
  end
  
 def new
@@ -11,9 +12,8 @@ def new
   end
   
 def create
-    @user = User.find(params[:user_id])
+    @user = User.find(2)
    
-
     @article = @user.articles.create(params[:article])
     render :action => "show"
      end

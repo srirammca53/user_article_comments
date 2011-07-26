@@ -6,7 +6,11 @@ end
 resources :articles do 
 resources :comments 
 end
-resources :comments 
+resources :comments do
+  collection do
+  get 'approve'
+  end
+end 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
